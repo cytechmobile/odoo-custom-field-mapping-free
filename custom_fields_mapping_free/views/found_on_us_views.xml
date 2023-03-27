@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_found_on_us_form" model="ir.ui.view">
+        <field name="name">found.on.us.form</field>
+        <field name="model">found.on.us</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_found_on_us_tree" model="ir.ui.view">
+        <field name="name">found.on.us.tree</field>
+        <field name="model">found.on.us</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_found_on_us" model="ir.actions.act_window">
+        <field name="name">Found On Us</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">found.on.us</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

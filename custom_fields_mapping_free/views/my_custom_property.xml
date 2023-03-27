@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_my_custom_property_form" model="ir.ui.view">
+        <field name="name">my.custom.property.form</field>
+        <field name="model">my.custom.property</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="field_name"/>
+                        <field name="table_name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_my_custom_property_tree" model="ir.ui.view">
+        <field name="name">my.custom.property.tree</field>
+        <field name="model">my.custom.property</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="field_name"/>
+                <field name="table_name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_my_custom_property" model="ir.actions.act_window">
+        <field name="name">Custom Fields</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">my.custom.property</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

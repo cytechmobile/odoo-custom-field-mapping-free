@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="my_custom_property_firstname" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_firstname</field>
+        </record>
+
+        <record id="my_custom_property_lastname" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_lastname</field>
+        </record>
+
+        <record id="my_custom_property_industry" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_industry</field>
+        </record>
+
+         <record id="my_custom_property_created_time" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_created_time</field>
+        </record>
+
+        <record id="my_custom_property_skype_id" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_skype_id</field>
+        </record>
+
+        <record id="my_custom_property_email_opt_out" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_email_opt_out</field>
+        </record>
+
+        <record id="my_custom_property_vat_no" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_vat_no</field>
+        </record>
+
+         <record id="my_custom_property_secondary_email" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_secondary_email</field>
+        </record>
+
+        <record id="my_custom_property_job_description" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_job_description</field>
+        </record>
+
+        <record id="my_custom_property_tax_office" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_tax_office</field>
+        </record>
+
+        <record id="my_custom_property_competitor" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_competitor</field>
+        </record>
+
+         <record id="my_custom_property_lead_owner_id" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_lead_owner_id</field>
+            <field name="table_name">lead_owner_id</field>
+        </record>
+
+        <record id="my_custom_property_lead_status" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_lead_status</field>
+            <field name="table_name">lead_status</field>
+        </record>
+
+        <record id="my_custom_property_found_on_us" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_found_on_us</field>
+            <field name="table_name">found_on_us</field>
+        </record>
+
+        <record id="my_custom_property_interested_in" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_interested_in</field>
+            <field name="table_name">interested_in</field>
+        </record>
+
+         <record id="my_custom_property_salutation" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_salutation</field>
+             <field name="table_name">salutation</field>
+        </record>
+
+        <record id="my_custom_property_currency" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_currency</field>
+            <field name="table_name">currency</field>
+        </record>
+
+        <record id="my_custom_property_company_legacy" model="my.custom.property">
+            <field name="field_name">x_cytech_custom_field_mapping_crm_lead_company_legacy</field>
+            <field name="table_name">company_legacy</field>
+        </record>
+
+    </data>
+</odoo>

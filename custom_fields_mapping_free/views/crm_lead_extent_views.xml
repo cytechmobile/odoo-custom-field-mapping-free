@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="crm_lead_extent_view_form" model="ir.ui.view">
+        <field name="name">crm.lead.form.inherit.test</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tag_ids']" position="after">
+                <field name="x_cytech_custom_field_mapping_crm_lead_industry" />
+                <field name="x_cytech_custom_field_mapping_crm_lead_created_time" >%Y-%m-%d %H:%M:%S</field>
+                <field name="x_cytech_custom_field_mapping_crm_lead_email_opt_out" />
+                <field name="x_cytech_custom_field_mapping_crm_lead_vat_no" />
+                <field name="x_cytech_custom_field_mapping_crm_lead_tax_office" />
+                <field name="x_cytech_custom_field_mapping_crm_lead_competitor" />
+                <field name="x_cytech_custom_field_mapping_crm_lead_lead_owner_id" />
+                <field name="x_cytech_custom_field_mapping_crm_lead_lead_status" />
+                <field name="x_cytech_custom_field_mapping_crm_lead_firstname" />
+                <field name="x_cytech_custom_field_mapping_crm_lead_lastname" />
+                <field name="x_cytech_custom_field_mapping_crm_lead_skype_id" />
+                <field name="x_cytech_custom_field_mapping_crm_lead_secondary_email" />
+                <field name="x_cytech_custom_field_mapping_crm_lead_job_description" />
+                <field name="x_cytech_custom_field_mapping_crm_lead_found_on_us" />
+                <field name="x_cytech_custom_field_mapping_crm_lead_interested_in" />
+                <field name="x_cytech_custom_field_mapping_crm_lead_salutation" />
+                <field name="x_cytech_custom_field_mapping_crm_lead_currency" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

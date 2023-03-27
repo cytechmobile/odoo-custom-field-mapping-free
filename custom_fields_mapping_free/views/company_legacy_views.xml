@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_company_legacy_form" model="ir.ui.view">
+        <field name="name">company.legacy.form</field>
+        <field name="model">company.legacy</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_company_legacy_tree" model="ir.ui.view">
+        <field name="name">company.legacy.tree</field>
+        <field name="model">company.legacy</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_company_legacy" model="ir.actions.act_window">
+        <field name="name">Company Legacy</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">company.legacy</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
