@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  odooCustomFieldsMapping:
+  odooCustomFieldsMappingFreeVersion:
     runs-on: [ self-hosted, linux ]
     steps:
       - name: checkout
@@ -50,7 +50,7 @@ jobs:
       - name: Google Chat Notification
         uses: Co-qn/google-chat-notification@releases/v1
         with:
-          name: Build odooCustomFieldsMapping
+          name: Build odooCustomFieldsMappingFreeVersion
           url: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
           status: ${{ job.status }}
         if: always()
