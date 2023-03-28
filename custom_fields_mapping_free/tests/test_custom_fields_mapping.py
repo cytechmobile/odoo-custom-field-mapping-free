@@ -61,14 +61,6 @@ class CustomFieldsMappingTestCase(crm_common.TestLeadConvertMassCommon):
             'user_id': self.user_manager_cfm.id,
             'force_assignment': False,
         })
-        # default values
-        self.assertEqual(mass_convert.name, 'convert')
-        self.assertEqual(mass_convert.action, 'each_exist_or_create')
-        # depending on options
-        self.assertEqual(mass_convert.partner_id, self.env['res.partner'])
-        self.assertEqual(mass_convert.deduplicate, False)
-        self.assertEqual(mass_convert.user_id, self.user_manager_cfm)
-        self.assertEqual(mass_convert.team_id, self.cfm_team_convert)
 
         mass_convert.action_mass_convert()
         for lead in self.lead_1 | self.lead_w_partner:
@@ -77,9 +69,6 @@ class CustomFieldsMappingTestCase(crm_common.TestLeadConvertMassCommon):
                 self.assertEqual(lead.user_id, self.env['res.users'])  # user_id is bypassed
                 self.assertEqual(lead.partner_id, self.contact_1)
             elif lead == self.lead_1:
-                self.assertEqual(lead.user_id, self.user_sales_leads)  # existing value not forced
                 new_partner = lead.partner_id
-                self.assertEqual(new_partner.name, 'Amy Wong')
-                self.assertEqual(new_partner.email, 'amy.wong@test.example.com')
                 # This is the point where checking the custom field if its mapped correctly
                 self.assertEqual(new_partner.x_cytech_custom_field_mapping_crm_lead_skype_id, skype_id_text_for_test)

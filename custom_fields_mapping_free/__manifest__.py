@@ -7,8 +7,9 @@
     'author': 'Cytech',
     'maintainer': 'Cytech',
     'category': 'Extra Tools',
-    'summary': 'Creating custom fields mapping',
-    'description': "Creating custom fields mapping between leads and contacts",
+    'website':'https://www.cytechmobile.com/',
+    'summary': 'Custom Fields Mapping is an Odoo module that will allow you to map custom fields from CRM-Leads to the Contacts module.',
+    'description': "Custom Fields Mapping is an Odoo module that will allow you to map custom fields from CRM-Leads to the Contacts module.",
     'depends': ['crm', 'base', 'web', 'contacts', 'partner_autocomplete'],
     'data': [
         'security/security.xml',
@@ -35,5 +36,5 @@
         ],
     },
     'images': ['static/description/banner.png','static/description/icon.png'],
-    'license': 'Other proprietary',
+    'license': 'OPL-1',
 }
