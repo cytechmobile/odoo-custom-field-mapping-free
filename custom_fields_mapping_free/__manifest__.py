@@ -34,5 +34,6 @@
         'web.assets_backend': [
         ],
     },
+    'images': ['static/description/banner.png','static/description/icon.png'],
     'license': 'Other proprietary',
 }
