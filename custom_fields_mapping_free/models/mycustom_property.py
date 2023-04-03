@@ -8,7 +8,8 @@ class MyCustomPropertyModel(models.Model):
     _name = 'my.custom.property'
     _description = "My Custom Property"
 
-    field_name = fields.Char(string='Field Name', required=True)
+    field_name = fields.Char(string='Field Name', default='x_cytech_custom_field_mapping_crm_lead_', required=True)
+    label_name = fields.Char(string='Label Name', required=True)
     table_name = fields.Char(string='Table Name')
     field_type = fields.Selection(
         string='Type',

@@ -9,6 +9,7 @@
                 <sheet>
                     <group>
                         <field name="field_name"/>
+                        <field name="label_name"/>
                         <field name="table_name"/>
                     </group>
                 </sheet>
@@ -22,6 +23,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="field_name"/>
+                <field name="label_name"/>
                 <field name="table_name"/>
             </tree>
         </field>

@@ -5,8 +5,8 @@ class PartnerExtended(models.Model):
     _name = "res.partner"
     _inherit = 'res.partner'
 
-    x_cytech_custom_field_mapping_crm_lead_firstname = fields.Char(string='Firstname')
-    x_cytech_custom_field_mapping_crm_lead_lastname = fields.Char(string='Lastname')
+    x_cytech_custom_field_mapping_crm_lead_firstname = fields.Char(string='First Name')
+    x_cytech_custom_field_mapping_crm_lead_lastname = fields.Char(string='Last Name')
     x_cytech_custom_field_mapping_crm_lead_industry = fields.Char(string='Industry (Legacy)')
     x_cytech_custom_field_mapping_crm_lead_created_time = fields.Datetime(string='Created Time')
     x_cytech_custom_field_mapping_crm_lead_skype_id = fields.Char(string='Skype ID')

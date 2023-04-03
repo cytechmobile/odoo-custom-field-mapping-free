@@ -2,51 +2,57 @@
 <odoo>
     <menuitem id="menu_custom_fields_mapping_property_root" name="Custom Fields Mapping" sequence="1"/>
 
-    <menuitem id="menu_estate_property_custom_fields"
+    <menuitem id="menu_custom_fields_mapping_custom_fields"
               name="Custom Fields"
               parent="menu_custom_fields_mapping_property_root"
               action="action_my_custom_property"
               sequence="3"/>
 
+    <menuitem
+            id="menu_custom_fields_mapping_dropdowns"
+            name="Dropdowns"
+            parent="menu_custom_fields_mapping_property_root"
+            sequence="4"/>
+
     <menuitem id="menu_custom_fields_mapping_lead_owner_id"
               name="Lead Owner Id"
-              parent="menu_custom_fields_mapping_property_root"
+              parent="menu_custom_fields_mapping_dropdowns"
               action="action_lead_owner_id"
-              sequence="4"/>
+              sequence="5"/>
 
     <menuitem id="menu_custom_fields_mapping_lead_status"
               name="Lead Status"
-              parent="menu_custom_fields_mapping_property_root"
+              parent="menu_custom_fields_mapping_dropdowns"
               action="action_lead_status"
-              sequence="5"/>
+              sequence="6"/>
 
     <menuitem id="menu_custom_fields_mapping_found_on_us"
               name="Found On Us"
-              parent="menu_custom_fields_mapping_property_root"
+              parent="menu_custom_fields_mapping_dropdowns"
               action="action_found_on_us"
-              sequence="6"/>
+              sequence="7"/>
 
     <menuitem id="menu_custom_fields_mapping_interested_in"
               name="Interested In"
-              parent="menu_custom_fields_mapping_property_root"
+              parent="menu_custom_fields_mapping_dropdowns"
               action="action_interested_in"
-              sequence="7"/>
+              sequence="8"/>
 
     <menuitem id="menu_custom_fields_mapping_salutation"
               name="Salutation"
-              parent="menu_custom_fields_mapping_property_root"
+              parent="menu_custom_fields_mapping_dropdowns"
               action="action_salutation"
-              sequence="8"/>
+              sequence="9"/>
 
     <menuitem id="menu_custom_fields_mapping_currency"
               name="Currency"
-              parent="menu_custom_fields_mapping_property_root"
+              parent="menu_custom_fields_mapping_dropdowns"
               action="action_currency"
-              sequence="9"/>
+              sequence="10"/>
 
     <menuitem id="menu_custom_fields_mapping_company_legacy"
               name="Company Legacy"
-              parent="menu_custom_fields_mapping_property_root"
+              parent="menu_custom_fields_mapping_dropdowns"
               action="action_company_legacy"
-              sequence="10"/>
+              sequence="11"/>
 </odoo>
