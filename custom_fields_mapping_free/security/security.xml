@@ -15,7 +15,7 @@
 
     <record id="group_custom_fields_mapping_manager" model="res.groups">
         <field name="name">Administrator</field>
-        <field name="comment">The user will have access to migrate and add custom fields.</field>
+        <field name="comment">The user will have access to add custom fields.</field>
         <field name="category_id" ref="base.module_category_extra_tools"/>
         <field name="implied_ids" eval="[(4, ref('group_custom_fields_mapping_user'))]"/>
         <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
