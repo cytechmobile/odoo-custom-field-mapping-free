@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Custom Fields Mapping',
-    'version': '1.0.0',
+    'version': '1.0.1',
     'sequence': 1,
     'author': 'Cytech',
     'maintainer': 'Cytech',
