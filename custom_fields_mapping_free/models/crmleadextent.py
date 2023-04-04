@@ -21,7 +21,7 @@ class CRMLeadExtendModel(models.Model):
     x_cytech_custom_field_mapping_crm_lead_competitor = fields.Char(string='Competitor')
     x_cytech_custom_field_mapping_crm_lead_lead_owner_id = fields.Many2one('lead.owner.id', 'Lead Owner ID (Legacy)')
     x_cytech_custom_field_mapping_crm_lead_lead_status = fields.Many2one('lead.status', 'Lead Status (Legacy)')
-    x_cytech_custom_field_mapping_crm_lead_found_on_us = fields.Many2one('found.on.us', 'Found On Us')
+    x_cytech_custom_field_mapping_crm_lead_found_on_us = fields.Many2one('found.on.us', 'Found Us From')
     x_cytech_custom_field_mapping_crm_lead_interested_in = fields.Many2one('interested.in', 'Interested In')
     x_cytech_custom_field_mapping_crm_lead_salutation = fields.Many2one('salutation', 'Salutation')
     x_cytech_custom_field_mapping_crm_lead_currency = fields.Many2one('currency', 'Currency (Legacy)')
