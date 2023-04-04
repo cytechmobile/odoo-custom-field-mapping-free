@@ -35,15 +35,15 @@ jobs:
       - name: test-plugin-odoo16
         run: |
           docker pull odoo:16
-          docker run --rm --volume $(pwd):/mnt/extra-addons --entrypoint /usr/bin/odoo odoo:16 -i custom_fields_mapping_free -d odootest16 -p 8001 --db_user=${DB_USER} --db_password=${DB_PASS} --db_host=${DBIP} --log-level=debug --test-file=/mnt/extra-addons/custom_fields_mapping_free/tests/test_custom_fields_mapping.py --stop-after-init
+          docker run --rm --volume $(pwd):/mnt/extra-addons --entrypoint /usr/bin/odoo odoo:16 -i custom_fields_mapping_free -d odootest16 -p 8001 --db_user=${DB_USER} --db_password=${DB_PASS} --db_host=${DBIP} --test-file=/mnt/extra-addons/custom_fields_mapping_free/tests/test_custom_fields_mapping.py --stop-after-init
       - name: test-plugin-odoo15
         run: |
           docker pull odoo:15
-          docker run --rm --volume $(pwd):/mnt/extra-addons --entrypoint /usr/bin/odoo odoo:15 -i custom_fields_mapping_free -d odootest15 -p 8001 --db_user=${DB_USER} --db_password=${DB_PASS} --db_host=${DBIP} --log-level=debug --test-file=/mnt/extra-addons/custom_fields_mapping_free/tests/test_custom_fields_mapping.py --stop-after-init
+          docker run --rm --volume $(pwd):/mnt/extra-addons --entrypoint /usr/bin/odoo odoo:15 -i custom_fields_mapping_free -d odootest15 -p 8001 --db_user=${DB_USER} --db_password=${DB_PASS} --db_host=${DBIP} --test-file=/mnt/extra-addons/custom_fields_mapping_free/tests/test_custom_fields_mapping.py --stop-after-init
       - name: test-plugin-odoo14
         run: |
           docker pull odoo:14
-          docker run --rm --volume $(pwd):/mnt/extra-addons --entrypoint /usr/bin/odoo odoo:14 -i custom_fields_mapping_free -d odootest14 -p 8001 --db_user=${DB_USER} --db_password=${DB_PASS} --db_host=${DBIP} --log-level=debug --test-file=/mnt/extra-addons/custom_fields_mapping_free/tests/test_custom_fields_mapping.py --stop-after-init
+          docker run --rm --volume $(pwd):/mnt/extra-addons --entrypoint /usr/bin/odoo odoo:14 -i custom_fields_mapping_free -d odootest14 -p 8001 --db_user=${DB_USER} --db_password=${DB_PASS} --db_host=${DBIP} --test-file=/mnt/extra-addons/custom_fields_mapping_free/tests/test_custom_fields_mapping.py --stop-after-init
       - name: Stop Test DB
         if: always()
         run: docker rm -f "${DBID}"
