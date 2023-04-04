@@ -9,7 +9,7 @@
     <record id="group_custom_fields_mapping_user" model="res.groups">
         <field name="name">Viewer</field>
         <field name="category_id" ref="base.module_category_extra_tools"/>
-        <field name="implied_ids" eval="[(6, 0, [ref('base.group_private_addresses'), ref('base.group_user')])]"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
         <field name="comment">The users will be able only to view</field>
     </record>
 

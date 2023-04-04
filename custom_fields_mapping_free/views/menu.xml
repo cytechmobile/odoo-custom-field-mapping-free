@@ -27,7 +27,7 @@
               sequence="6"/>
 
     <menuitem id="menu_custom_fields_mapping_found_on_us"
-              name="Found On Us"
+              name="Found Us On"
               parent="menu_custom_fields_mapping_dropdowns"
               action="action_found_on_us"
               sequence="7"/>
