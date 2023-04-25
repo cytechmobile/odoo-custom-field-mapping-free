@@ -12,7 +12,6 @@
     'description': "Custom Fields Mapping is an Odoo module that will allow you to map custom fields from CRM-Leads to the Contacts module.",
     'depends': ['crm', 'base', 'web', 'contacts', 'partner_autocomplete'],
     'data': [
-        'security/security.xml',
         'security/ir.model.access.csv',
         'data/data.xml',
         'views/my_custom_property.xml',
