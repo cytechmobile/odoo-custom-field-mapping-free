@@ -24,7 +24,7 @@
 
         <record id="my_custom_property_skype_id" model="my.custom.property">
             <field name="field_name">x_cytech_custom_field_mapping_crm_lead_skype_id</field>
-            <field name="label_name">Last Name</field>
+            <field name="label_name">SkypeID</field>
         </record>
 
         <record id="my_custom_property_email_opt_out" model="my.custom.property">
