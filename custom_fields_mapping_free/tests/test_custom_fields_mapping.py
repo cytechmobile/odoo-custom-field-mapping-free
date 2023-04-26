@@ -24,7 +24,7 @@ class CustomFieldsMappingTestCase(crm_common.TestLeadConvertMassCommon):
             name='User Manager CFM', email='cfm_manager@test.example.com',
             company_id=cls.company_main.id,
             notification_type='inbox',
-            groups='custom_fields_mapping_free.group_custom_fields_mapping_manager,sales_team.group_sale_manager',
+            groups='sales_team.group_sale_manager',
         )
 
         cls.cfm_team_convert = cls.env['crm.team'].create({
