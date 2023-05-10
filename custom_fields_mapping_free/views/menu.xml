@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <menuitem id="menu_custom_fields_mapping_property_root" name="Custom Fields Mapping" sequence="1"/>
+    <menuitem id="menu_custom_fields_mapping_property_root"
+              web_icon="cfm,static/description/icon.png"
+              name="Custom Fields Mapping"
+              sequence="1"/>
 
     <menuitem id="menu_custom_fields_mapping_custom_fields"
               name="Custom Fields"
