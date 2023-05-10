@@ -2,12 +2,12 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Custom Fields Mapping',
-    'version': '1.0.2',
+    'version': '1.0.3',
     'sequence': 1,
     'author': 'Cytech',
     'maintainer': 'Cytech',
     'category': 'Extra Tools',
-    'website':'https://www.cytechmobile.com/',
+    'website': 'https://www.cytechmobile.com/',
     'summary': 'Custom Fields Mapping is an Odoo module that will allow you to map custom fields from CRM-Leads to the Contacts module.',
     'description': "Custom Fields Mapping is an Odoo module that will allow you to map custom fields from CRM-Leads to the Contacts module.",
     'depends': ['crm', 'base', 'web', 'contacts', 'partner_autocomplete'],
@@ -34,6 +34,6 @@
         'web.assets_backend': [
         ],
     },
-    'images': ['static/description/banner.png','static/description/icon.png'],
-    'license': 'OPL-1',
+    'images': ['static/description/banner.png', 'static/description/icon.png'],
+    'license': 'GPL-3',
 }
