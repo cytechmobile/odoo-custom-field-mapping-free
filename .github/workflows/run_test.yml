@@ -1,0 +1,58 @@
+name: odooCustomFieldsMappingFreeVersion Tests
+
+on:
+  workflow_dispatch:
+  push:
+
+# By setting up concurrency group using github.ref, we essentially instruct github to only run one workflow at a time per branch
+# With "cancel-in-progress: true" we also specify that existing/running workflows for that branch will be canceled
+concurrency:
+  group: odooCustomFieldsMappingFreeVersion-${{github.ref}}
+  cancel-in-progress: true
+
+jobs:
+  odooCustomFieldsMappingFreeVersion:
+    runs-on: [ self-hosted, linux ]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: Start Test DB
+        # start a db, find its id and ip and set them to the github env, to make them available to next steps
+        run: |
+          DB_USER="odooTest"
+          DB_PASS="odooTest1234"
+          DB_NAME="odooDev"
+          DBID=$(docker run -d -e POSTGRES_USER=$DB_USER -e POSTGRES_PASSWORD=$DB_PASS -e POSTGRES_DB=$DB_NAME --tmpfs /var/lib/postgresql/data:rw postgres:alpine -c fsync=off -c synchronous_commit=off -c full_page_writes=off)
+          echo "started db: ${DBID}"
+          echo "DBID=$DBID" >> $GITHUB_ENV
+          DBIP=$(docker inspect -f {{.NetworkSettings.IPAddress}} ${DBID})
+          echo "found db ip: ${DBIP}"
+          echo "DBIP=${DBIP}" >> $GITHUB_ENV
+          echo "DB_HOST=${DBIP}" >> $GITHUB_ENV
+          echo "DB_USER=${DB_USER}" >> $GITHUB_ENV
+          echo "DB_PASS=${DB_PASS}" >> $GITHUB_ENV
+          echo "DB_NAME=${DB_NAME}" >> $GITHUB_ENV
+      - name: test-plugin-odoo16
+        run: |
+          docker pull odoo:16
+          docker run --rm --volume $(pwd):/mnt/extra-addons --entrypoint /usr/bin/odoo odoo:16 -i custom_fields_mapping_free -d odootest16 -p 8001 --db_user=${DB_USER} --db_password=${DB_PASS} --db_host=${DBIP} --test-file=/mnt/extra-addons/custom_fields_mapping_free/tests/test_custom_fields_mapping.py --stop-after-init
+      - name: test-plugin-odoo15
+        run: |
+          docker pull odoo:15
+          docker run --rm --volume $(pwd):/mnt/extra-addons --entrypoint /usr/bin/odoo odoo:15 -i custom_fields_mapping_free -d odootest15 -p 8001 --db_user=${DB_USER} --db_password=${DB_PASS} --db_host=${DBIP} --test-file=/mnt/extra-addons/custom_fields_mapping_free/tests/test_custom_fields_mapping.py --stop-after-init
+      - name: test-plugin-odoo14
+        run: |
+          docker pull odoo:14
+          docker run --rm --volume $(pwd):/mnt/extra-addons --entrypoint /usr/bin/odoo odoo:14 -i custom_fields_mapping_free -d odootest14 -p 8001 --db_user=${DB_USER} --db_password=${DB_PASS} --db_host=${DBIP} --test-file=/mnt/extra-addons/custom_fields_mapping_free/tests/test_custom_fields_mapping.py --stop-after-init
+      - name: Stop Test DB
+        if: always()
+        run: docker rm -f "${DBID}"
+      - name: Google Chat Notification
+        uses: Co-qn/google-chat-notification@releases/v1
+        with:
+          name: Build odooCustomFieldsMappingFreeVersion
+          url: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
+          status: ${{ job.status }}
+        if: always()
+        # this allows the build to succeed even when the notification fails (e.g. due to dependabot push, which does not have the secret)
+        continue-on-error: true
