@@ -35,5 +35,5 @@
         ],
     },
     'images': ['static/description/banner.png', 'static/description/icon.png'],
-    'license': 'GPL-3',
+    'license': 'LGPL-3',
 }
